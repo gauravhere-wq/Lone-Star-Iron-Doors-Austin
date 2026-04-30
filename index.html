@@ -7,9 +7,6 @@
   <meta name="keywords" content="iron doors, steel doors, Texas, handcrafted, custom doors, entry doors"/>
   <meta property="og:title" content="Lone Star Iron Doors – Artisan Metal Design"/>
   <meta property="og:description" content="Handcrafted steel doors forged by Texas artisans. Built to endure, designed to impress."/>
-  <meta property="og:image" content="images/hero1.jpg"/>
-  <meta property="og:url"   content="https://lonestarirondoors.com"/>
-  <link rel="icon" href="images/hero1.jpg" type="image/jpeg"/>
   <meta property="og:type" content="website"/>
   <title>Lone Star Iron Doors – Artisan Metal Design</title>
 
@@ -38,6 +35,7 @@
       <li><a href="#doors">Doors</a></li>
       <li><a href="#knobs">Finishes</a></li>
       <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#calculator">Calculator</a></li>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#reviews">Reviews</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
@@ -417,21 +415,21 @@
         <!-- Finish Swatches -->
         <div class="finishes-swatches fade-up">
           <div class="swatch-item">
-            <div class="swatch-color swatch-black"></div>
+            <img src="images/finish_black.jpg" alt="Matte Black finish" class="swatch-img"/>
             <div class="swatch-info">
               <div class="swatch-name">Matte Black</div>
               <div class="swatch-desc">Our most popular finish. Timeless, dramatic, and pairs with any architectural style.</div>
             </div>
           </div>
           <div class="swatch-item">
-            <div class="swatch-color swatch-copper"></div>
+            <img src="images/finish_copper.jpg" alt="Copper Patina finish" class="swatch-img"/>
             <div class="swatch-info">
               <div class="swatch-name">Copper Patina</div>
               <div class="swatch-desc">A warm, rich tone that develops character with age. Ideal for traditional and Mediterranean homes.</div>
             </div>
           </div>
           <div class="swatch-item">
-            <div class="swatch-color swatch-bronze"></div>
+            <img src="images/finish_bronze.jpg" alt="Bronze finish" class="swatch-img"/>
             <div class="swatch-info">
               <div class="swatch-name">Bronze</div>
               <div class="swatch-desc">Subtle warmth with depth. The perfect balance between bold and refined.</div>
@@ -443,13 +441,13 @@
         <div class="fade-up">
           <div class="handles-title">Handle Styles</div>
           <div class="handles-grid">
-            <div class="handle-item"><span class="handle-letter">A</span><span class="handle-name">Classic</span></div>
-            <div class="handle-item"><span class="handle-letter">B</span><span class="handle-name">Scroll</span></div>
-            <div class="handle-item"><span class="handle-letter">C</span><span class="handle-name">Flush</span></div>
-            <div class="handle-item"><span class="handle-letter">D</span><span class="handle-name">Modern</span></div>
-            <div class="handle-item"><span class="handle-letter">E</span><span class="handle-name">Slim</span></div>
-            <div class="handle-item"><span class="handle-letter">F</span><span class="handle-name">Curl</span></div>
-            <div class="handle-item"><span class="handle-letter">G</span><span class="handle-name">Blade</span></div>
+            <div class="handle-item"><img src="images/handle_a.jpg" alt="Handle A — Classic"/><span class="handle-name">Classic</span></div>
+            <div class="handle-item"><img src="images/handle_b.jpg" alt="Handle B — Scroll"/><span class="handle-name">Scroll</span></div>
+            <div class="handle-item"><img src="images/handle_c.jpg" alt="Handle C — Flush"/><span class="handle-name">Flush</span></div>
+            <div class="handle-item"><img src="images/handle_d.jpg" alt="Handle D — Modern"/><span class="handle-name">Modern</span></div>
+            <div class="handle-item"><img src="images/handle_e.jpg" alt="Handle E — Slim"/><span class="handle-name">Slim</span></div>
+            <div class="handle-item"><img src="images/handle_f.jpg" alt="Handle F — Curl"/><span class="handle-name">Curl</span></div>
+            <div class="handle-item"><img src="images/handle_g.jpg" alt="Handle G — Blade"/><span class="handle-name">Blade</span></div>
           </div>
           <p class="handles-note">
             All handles available in any of our three finishes. Mix and match to create a truly bespoke entrance.
@@ -530,6 +528,175 @@
         A deposit is required to initiate production. 6-week lead time begins after all paperwork is signed and deposit received.
       </p>
 
+    </div><!-- /section-inner -->
+  </section>
+
+
+  <!-- ============================================================
+       PRICING CALCULATOR
+  ============================================================ -->
+  <section id="calculator">
+    <div class="section-inner">
+      <div class="section-header fade-up">
+        <div class="section-tag">Build Your Door</div>
+        <h2 class="section-title">Price<br><em>Calculator</em></h2>
+      </div>
+
+      <div class="calc-wrapper fade-up">
+
+        <!-- STEP 1: Door Type -->
+        <div class="calc-step">
+          <div class="calc-step-header">
+            <span class="calc-step-num">1</span>
+            <span class="calc-step-title">Choose Door Type</span>
+          </div>
+          <div class="calc-options">
+            <div class="calc-option selected" onclick="selectOption(this, 'type', 'single', 2800)">
+              <div class="calc-option-icon">🚪</div>
+              <div class="calc-option-label">Single Door</div>
+              <div class="calc-option-sub">38" × 96"</div>
+              <div class="calc-option-price">from $2,800</div>
+            </div>
+            <div class="calc-option" onclick="selectOption(this, 'type', 'double', 5200)">
+              <div class="calc-option-icon">🚪🚪</div>
+              <div class="calc-option-label">Double Door</div>
+              <div class="calc-option-sub">74" × 96"</div>
+              <div class="calc-option-price">from $5,200</div>
+            </div>
+            <div class="calc-option" onclick="selectOption(this, 'type', 'custom', 7500)">
+              <div class="calc-option-icon">✦</div>
+              <div class="calc-option-label">Custom Build</div>
+              <div class="calc-option-sub">Any dimension</div>
+              <div class="calc-option-price">from $7,500</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2: Finish -->
+        <div class="calc-step">
+          <div class="calc-step-header">
+            <span class="calc-step-num">2</span>
+            <span class="calc-step-title">Select Finish</span>
+          </div>
+          <div class="calc-options">
+            <div class="calc-option selected" onclick="selectOption(this, 'finish', 'black', 0)">
+              <img src="images/finish_black.jpg" alt="Matte Black" class="calc-finish-img"/>
+              <div class="calc-option-label">Matte Black</div>
+              <div class="calc-option-price">Included</div>
+            </div>
+            <div class="calc-option" onclick="selectOption(this, 'finish', 'copper', 200)">
+              <img src="images/finish_copper.jpg" alt="Copper Patina" class="calc-finish-img"/>
+              <div class="calc-option-label">Copper Patina</div>
+              <div class="calc-option-price">+$200</div>
+            </div>
+            <div class="calc-option" onclick="selectOption(this, 'finish', 'bronze', 150)">
+              <img src="images/finish_bronze.jpg" alt="Bronze" class="calc-finish-img"/>
+              <div class="calc-option-label">Bronze</div>
+              <div class="calc-option-price">+$150</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 3: Handle Style -->
+        <div class="calc-step">
+          <div class="calc-step-header">
+            <span class="calc-step-num">3</span>
+            <span class="calc-step-title">Choose Handle Style</span>
+          </div>
+          <div class="calc-options calc-options--handles">
+            <div class="calc-option calc-option--handle selected" onclick="selectOption(this, 'handle', 'a', 0)">
+              <img src="images/handle_a.jpg" alt="Classic Handle"/>
+              <div class="calc-option-label">Classic</div>
+              <div class="calc-option-price">Included</div>
+            </div>
+            <div class="calc-option calc-option--handle" onclick="selectOption(this, 'handle', 'b', 0)">
+              <img src="images/handle_b.jpg" alt="Scroll Handle"/>
+              <div class="calc-option-label">Scroll</div>
+              <div class="calc-option-price">Included</div>
+            </div>
+            <div class="calc-option calc-option--handle" onclick="selectOption(this, 'handle', 'c', 0)">
+              <img src="images/handle_c.jpg" alt="Flush Handle"/>
+              <div class="calc-option-label">Flush</div>
+              <div class="calc-option-price">Included</div>
+            </div>
+            <div class="calc-option calc-option--handle" onclick="selectOption(this, 'handle', 'd', 0)">
+              <img src="images/handle_d.jpg" alt="Modern Handle"/>
+              <div class="calc-option-label">Modern</div>
+              <div class="calc-option-price">Included</div>
+            </div>
+            <div class="calc-option calc-option--handle" onclick="selectOption(this, 'handle', 'e', 0)">
+              <img src="images/handle_e.jpg" alt="Slim Handle"/>
+              <div class="calc-option-label">Slim</div>
+              <div class="calc-option-price">Included</div>
+            </div>
+            <div class="calc-option calc-option--handle" onclick="selectOption(this, 'handle', 'f', 0)">
+              <img src="images/handle_f.jpg" alt="Curl Handle"/>
+              <div class="calc-option-label">Curl</div>
+              <div class="calc-option-price">Included</div>
+            </div>
+            <div class="calc-option calc-option--handle" onclick="selectOption(this, 'handle', 'g', 0)">
+              <img src="images/handle_g.jpg" alt="Blade Handle"/>
+              <div class="calc-option-label">Blade</div>
+              <div class="calc-option-price">Included</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 4: Add-ons -->
+        <div class="calc-step">
+          <div class="calc-step-header">
+            <span class="calc-step-num">4</span>
+            <span class="calc-step-title">Add-ons (Optional)</span>
+          </div>
+          <div class="calc-addons">
+            <label class="calc-addon">
+              <input type="checkbox" onchange="toggleAddon('transom', 450)" />
+              <div class="calc-addon-body">
+                <div class="calc-addon-label">Transom Window</div>
+                <div class="calc-addon-desc">Glass panel above the door for extra light</div>
+              </div>
+              <div class="calc-addon-price">+$450</div>
+            </label>
+            <label class="calc-addon">
+              <input type="checkbox" onchange="toggleAddon('sidelights', 600)" />
+              <div class="calc-addon-body">
+                <div class="calc-addon-label">Sidelights (pair)</div>
+                <div class="calc-addon-desc">Two narrow glass panels flanking the door</div>
+              </div>
+              <div class="calc-addon-price">+$600</div>
+            </label>
+            <label class="calc-addon">
+              <input type="checkbox" onchange="toggleAddon('ada', 150)" />
+              <div class="calc-addon-body">
+                <div class="calc-addon-label">ADA Threshold</div>
+                <div class="calc-addon-desc">Accessibility compliant threshold upgrade</div>
+              </div>
+              <div class="calc-addon-price">+$150</div>
+            </label>
+            <label class="calc-addon">
+              <input type="checkbox" onchange="toggleAddon('pivot', 300)" />
+              <div class="calc-addon-body">
+                <div class="calc-addon-label">Pivot Threshold</div>
+                <div class="calc-addon-desc">Modern pivot-style door threshold</div>
+              </div>
+              <div class="calc-addon-price">+$300</div>
+            </label>
+          </div>
+        </div>
+
+        <!-- PRICE SUMMARY -->
+        <div class="calc-summary">
+          <div class="calc-summary-inner">
+            <div class="calc-summary-left">
+              <div class="calc-summary-label">Estimated Starting Price</div>
+              <div class="calc-summary-price" id="calc-total">$2,800</div>
+              <div class="calc-summary-note">Final price confirmed after consultation. Deposit required to begin production. 6-week lead time.</div>
+            </div>
+            <a href="#contact" class="calc-cta">Request Exact Quote →</a>
+          </div>
+        </div>
+
+      </div><!-- /calc-wrapper -->
     </div><!-- /section-inner -->
   </section>
 
@@ -619,18 +786,6 @@
               <div class="contact-detail-value">(512) 770-7558</div>
             </div>
           </div>
-
-          <div class="contact-detail">
-            <div class="contact-detail-icon">✉</div>
-             <div class="contact-detail-content">
-                <div class="contact-detail-label">Email</div>
-                 <div class="contact-detail-value">
-                  <a href="mailto:info@lonestarirondoors.com">
-                   info@lonestarirondoors.com
-                    </a>
-                 </div>
-               </div>
-              </div>
 
           <div class="contact-detail">
             <div class="contact-detail-icon">◎</div>

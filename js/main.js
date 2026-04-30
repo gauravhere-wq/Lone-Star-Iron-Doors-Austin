@@ -167,7 +167,7 @@ async function submitForm() {
     // ----------------------------------------------------------------
     // OPTION A: Formspree (replace URL below with your endpoint)
     // ----------------------------------------------------------------
-    const response = await fetch('https://formspree.io/f/xwvwrekv', {
+    const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify(fields),
@@ -269,3 +269,56 @@ const sectionObserver = new IntersectionObserver(
 );
 
 sections.forEach(section => sectionObserver.observe(section));
+
+/* ============================================================
+   7. PRICING CALCULATOR
+   Tracks selections and updates live price total
+============================================================ */
+const calcState = {
+  type:   { price: 2800, label: 'Single Door' },
+  finish: { price: 0,    label: 'Matte Black' },
+  handle: { price: 0,    label: 'Classic' },
+  addons: {}
+};
+
+function selectOption(el, group, value, price) {
+  // Remove selected from all siblings in same group
+  el.closest('.calc-options').querySelectorAll('.calc-option')
+    .forEach(opt => opt.classList.remove('selected'));
+
+  // Mark this one selected
+  el.classList.add('selected');
+
+  // Update state
+  calcState[group] = {
+    price: price,
+    label: el.querySelector('.calc-option-label').textContent
+  };
+
+  updateCalcTotal();
+}
+
+function toggleAddon(key, price) {
+  if (calcState.addons[key]) {
+    delete calcState.addons[key];
+  } else {
+    calcState.addons[key] = price;
+  }
+  updateCalcTotal();
+}
+
+function updateCalcTotal() {
+  const base    = calcState.type.price;
+  const finish  = calcState.finish.price;
+  const handle  = calcState.handle.price;
+  const addons  = Object.values(calcState.addons).reduce((a, b) => a + b, 0);
+  const total   = base + finish + handle + addons;
+
+  const el = document.getElementById('calc-total');
+  if (el) {
+    el.textContent = '$' + total.toLocaleString();
+    // Brief flash animation to draw attention to price change
+    el.style.color = '#fff';
+    setTimeout(() => el.style.color = 'var(--gold)', 250);
+  }
+}
