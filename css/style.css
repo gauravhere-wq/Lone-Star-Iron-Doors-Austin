@@ -26,15 +26,16 @@
    — Change colors here and they update everywhere
 ============================================================ */
 :root {
-  /* Brand Colors */
-  --cream:      #f2ede6;
-  --warm-gray:  #c8bfb0;
-  --dark:       #1a1714;
-  --charcoal:   #2d2926;
-  --mid:        #5a524a;
-  --copper:     #8b5e3c;
-  --gold:       #c9a96e;
-  --off-white:  #faf7f3;
+  /* Brand Colors — Lone Star Iron Doors Official Kit */
+  --cream:      #f5f0e8;        /* warm off-white page background */
+  --warm-gray:  #d4c9b8;        /* borders, dividers */
+  --dark:       #0F0F0F;        /* Matte Black — nav, backgrounds */
+  --charcoal:   #1e1e1e;        /* slightly lighter dark sections */
+  --mid:        #6b5f52;        /* secondary text */
+  --copper:     #B46A3C;        /* Burnt Copper — italic accents */
+  --gold:       #C2A985;        /* Warm Sand — primary brand accent */
+  --olive:      #4A5A3F;        /* Deep Olive — new accent */
+  --off-white:  #faf7f2;        /* lightest background */
 
   /* Typography */
   --font-serif: 'Cormorant Garamond', serif;
@@ -140,9 +141,15 @@ nav {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
   text-decoration: none;
 }
+.nav-logo-img {
+  height: 54px;
+  width: auto;
+  object-fit: contain;
+  transition: opacity var(--transition-fast);
+}
+.nav-logo-img:hover { opacity: 0.75; }
 .nav-logo .star-icon {
   width: 36px;
   height: 36px;
@@ -414,7 +421,7 @@ section {
   font-weight: 400;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--olive);
   margin-bottom: 16px;
   display: flex;
   align-items: center;
@@ -426,7 +433,7 @@ section {
   display: inline-block;
   width: 20px;
   height: 1px;
-  background: var(--gold);
+  background: var(--olive);
 }
 .section-title {
   font-family: var(--font-serif);
@@ -1147,6 +1154,13 @@ footer {
   gap: 48px;
 }
 
+.footer-logo-img {
+  height: 110px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 18px;
+  display: block;
+}
 .footer-logo-text {
   font-family: var(--font-serif);
   font-size: 22px;
@@ -1488,4 +1502,58 @@ footer {
   .calc-options { flex-direction: column; }
   .calc-option { min-width: unset; flex-direction: row; text-align: left; }
   .calc-finish-img { width: 48px; height: 48px; }
+}
+
+/* ============================================================
+   17. SOCIAL MEDIA / INSTAGRAM
+============================================================ */
+.ig-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+/* Instagram link inside contact section */
+.ig-link {
+  color: var(--dark);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 1px;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+.ig-link:hover {
+  color: var(--copper);
+  border-color: var(--copper);
+}
+
+/* Footer social row */
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+.social-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(194, 169, 133, 0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+}
+.social-btn .ig-icon { width: 17px; height: 17px; }
+.social-btn:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--dark);
+  transform: translateY(-2px);
+}
+.footer-social-handle {
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.45);
 }
