@@ -1,5 +1,5 @@
 /* ============================================================
-   LONE STAR IRON DOORS — main.js
+   CAPITOL IRON DOORS — main.js
 
    TABLE OF CONTENTS
    -----------------
@@ -158,6 +158,13 @@ async function submitForm() {
     return;
   }
 
+  // --- Formspree payload: _replyto sets reply-to, _subject sets inbox subject ---
+  const payload = {
+    ...fields,
+    _replyto: fields.email,
+    _subject: `New website inquiry from ${fields.fname} ${fields.lname}`.trim(),
+  };
+
   // --- Show loading state ---
   const btn = document.getElementById('submitBtn');
   btn.disabled = true;
@@ -167,10 +174,10 @@ async function submitForm() {
     // ----------------------------------------------------------------
     // OPTION A: Formspree (replace URL below with your endpoint)
     // ----------------------------------------------------------------
-    const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+    const response = await fetch('https://formspree.io/f/xwvwrekv', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(fields),
+      body: JSON.stringify(payload),
     });
 
     if (response.ok) {

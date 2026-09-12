@@ -1,5 +1,5 @@
 /* ============================================================
-   LONE STAR IRON DOORS — style.css
+   CAPITOL IRON DOORS — style.css
    
    TABLE OF CONTENTS
    -----------------
@@ -26,15 +26,15 @@
    — Change colors here and they update everywhere
 ============================================================ */
 :root {
-  /* Brand Colors — Lone Star Iron Doors Official Kit */
-  --cream:      #f5f0e8;        /* warm off-white page background */
-  --warm-gray:  #d4c9b8;        /* borders, dividers */
-  --dark:       #0F0F0F;        /* Matte Black — nav, backgrounds */
-  --charcoal:   #1e1e1e;        /* slightly lighter dark sections */
-  --mid:        #6b5f52;        /* secondary text */
-  --copper:     #B46A3C;        /* Burnt Copper — italic accents */
-  --gold:       #C2A985;        /* Warm Sand — primary brand accent */
-  --olive:      #4A5A3F;        /* Deep Olive — new accent */
+  /* Brand Colors — Capitol Iron Doors Official Kit */
+  --cream:      #f4efe7;        /* warm off-white page background */
+  --warm-gray:  #d3c8b6;        /* borders, dividers */
+  --dark:       #181818;        /* Ink Black — nav, backgrounds (from logo) */
+  --charcoal:   #242424;        /* slightly lighter dark sections */
+  --mid:        #6b6155;        /* secondary text */
+  --copper:     #8a6a3e;        /* deep antique-gold accent for italics */
+  --gold:       #A98A59;        /* Antique Gold — primary brand accent (from logo) */
+  --olive:      #7a6640;        /* muted bronze secondary accent */
   --off-white:  #faf7f2;        /* lightest background */
 
   /* Typography */
@@ -144,7 +144,7 @@ nav {
   text-decoration: none;
 }
 .nav-logo-img {
-  height: 54px;
+  height: 58px;
   width: auto;
   object-fit: contain;
   transition: opacity var(--transition-fast);
@@ -1155,7 +1155,7 @@ footer {
 }
 
 .footer-logo-img {
-  height: 110px;
+  height: 130px;
   width: auto;
   object-fit: contain;
   margin-bottom: 18px;
