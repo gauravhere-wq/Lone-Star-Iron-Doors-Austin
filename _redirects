@@ -1,0 +1,5 @@
+# 301 permanent redirect — Lone Star → Capitol Iron Doors
+# Deploy this on the OLD Netlify site (serving lonestarirondoorsaustin.com)
+# Forwards every old URL to the same path on the new domain, preserving SEO.
+https://lonestarirondoorsaustin.com/*  https://capitolirondoors.com/:splat  301!
+https://www.lonestarirondoorsaustin.com/*  https://capitolirondoors.com/:splat  301!
